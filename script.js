@@ -1,13 +1,12 @@
-function generateName() {
-    const syllables1 = ["Ra", "Ka", "Lo", "Mi", "Tu", "Za", "Be", "Xe"];
-    const syllables2 = ["li", "na", "ro", "su", "vi", "da", "ze", "mo"];
-    const syllables3 = ["th", "us", "an", "or", "ix", "el", "is", "on"];
-
-    const name = 
-        syllables1[Math.floor(Math.random() * syllables1.length)] + 
-        syllables2[Math.floor(Math.random() * syllables2.length)] + 
-        syllables3[Math.floor(Math.random() * syllables3.length)];
-
-    document.getElementById("nameDisplay").innerText = name;
+async function generateName() {
+    try {
+        const response = await fetch("https://randomuser.me/api/");
+        const data = await response.json();
+        const name = data.results[0].name.first + " " + data.results[0].name.last;
+        document.getElementById("nameDisplay").innerText = name;
+    } catch (error) {
+        document.getElementById("nameDisplay").innerText = "Error fetching name.";
+    }
 }
+
 
