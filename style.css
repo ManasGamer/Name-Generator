@@ -1,21 +1,44 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
-}
-
-.container {
-    margin-top: 50px;
-}
-
-button {
-    background-color: #28a745;
+    background: linear-gradient(to right, #8360c3, #2ebf91);
     color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Styling */
+.container {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 350px;
+}
+
+/* Button Styling */
+button {
+    background: #ff9800;
+    color: white;
+    font-size: 18px;
     padding: 10px 20px;
     border: none;
+    border-radius: 25px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #218838;
+    background: #e68900;
+    transform: scale(1.05);
+}
+
+/* Name Display */
+#nameDisplay {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
 }
