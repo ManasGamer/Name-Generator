@@ -1,12 +1,15 @@
 body {
-    background-color: #2d2d2d; /* Dark Grey */
-    color: white;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #000; /* Dark Black */
+}
+
+.container {
+    background-color: #333; /* Grey Container */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
+    color: white; /* Keep text readable */
 }
 
 .container {
