@@ -1,20 +1,17 @@
-async function generateName() {
-    const region = document.getElementById("regionSelect").value;
-    const apiUrl = `https://randomuser.me/api/?nat=${region}&inc=name`;
+document.getElementById("generate").addEventListener("click", function () {
+    const region = document.getElementById("region").value;
+    const nameDisplay = document.getElementById("nameDisplay");
 
-    try {
-        const response = await fetch(apiUrl);
-        const data = await response.json();
-        const name = `${data.results[0].name.first} ${data.results[0].name.last}`;
-        
-        document.getElementById("nameDisplay").textContent = name;
-    } catch (error) {
-        console.error("Error fetching name:", error);
-        document.getElementById("nameDisplay").textContent = "Error fetching name!";
-    }
-}
-
-
-
-
-
+    nameDisplay.textContent = "Loading...";
+    setTimeout(() => {
+        fetch(`https://randomuser.me/api/?nat=${region}`)
+            .then(response => response.json())
+            .then(data => {
+                const name = data.results[0].name.first;
+                nameDisplay.textContent = name;
+            })
+            .catch(() => {
+                nameDisplay.textContent = "Error fetching name!";
+            });
+    }, 500); // Small delay to prevent double-click spam
+});
