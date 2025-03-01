@@ -1,12 +1,26 @@
-async function generateName() {
-    try {
-        const response = await fetch("https://randomuser.me/api/");
-        const data = await response.json();
-        const name = data.results[0].name.first + " " + data.results[0].name.last;
-        document.getElementById("nameDisplay").innerText = name;
-    } catch (error) {
-        document.getElementById("nameDisplay").innerText = "Error fetching name.";
-    }
+const names = ["Alex", "Jordan", "Taylor", "Morgan", "Charlie", "Jamie", "Casey", "Skyler", "Drew", "Dakota"];
+
+function generateName() {
+    let button = document.querySelector("button");
+    let nameDisplay = document.getElementById("nameDisplay");
+
+    // Prevent spam-clicking by disabling button
+    button.disabled = true;
+    button.innerText = "Generating...";
+
+    // Show loading effect
+    nameDisplay.innerHTML = `<span class="loading">🔄 Choosing a name...</span>`;
+
+    // Simulate a fast process (0.5s delay)
+    setTimeout(() => {
+        let randomIndex = Math.floor(Math.random() * names.length);
+        nameDisplay.innerText = names[randomIndex];
+
+        // Re-enable button after a short delay
+        button.disabled = false;
+        button.innerText = "Generate Name";
+    }, 500);
 }
+
 
 
