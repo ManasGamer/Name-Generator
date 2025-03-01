@@ -1,44 +1,35 @@
-/* General Styles */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+/* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
     text-align: center;
-    background: linear-gradient(to right, #8360c3, #2ebf91);
+    background: linear-gradient(135deg, #1e1e2f, #3a3a6d);
     color: white;
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    margin: 0;
 }
 
-/* Container Styling */
-.container {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 350px;
+/* Glowing Header */
+h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Button Styling */
-button {
-    background: #ff9800;
-    color: white;
-    font-size: 18px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: 0.3s;
+/* Dice Emoji Next to Heading */
+h1::before {
+    content: "🎲";
+    margin-right: 10px;
 }
 
-button:hover {
-    background: #e68900;
-    transform: scale(1.05);
-}
-
-/* Name Display */
-#nameDisplay {
-    font-size: 24px;
-    font-weight: bold;
-    margin-top: 20px;
-}
+/* Glassmorphic Container */
+.co
