@@ -1,40 +1,51 @@
+/* General Styles */
 body {
     background-color: #000; /* Dark Black */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
+/* Container (Grey Box) */
 .container {
-    background-color: #333; /* Grey Container */
+    background-color: #333; /* Grey */
     padding: 20px;
     border-radius: 15px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     text-align: center;
     width: 350px;
-    color: white; /* Keep text readable */
+    color: white;
 }
 
-.container {
-    background: #3a3a3a; /* Slightly lighter grey */
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-    text-align: center;
-    width: 350px;
-}
-
+/* Button */
 button {
-    background: #ff4d4d;
+    background: #ff69b4; /* Pink Button */
     color: white;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
 }
 
 button:hover {
-    background: #ff3333;
+    background: #ff1493;
+    transform: scale(1.1);
 }
 
+/* Name Display */
+#nameDisplay {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    animation: blink 1s infinite;
+}
 
-
+/* Blinking Animation */
+@keyframes blink {
+    50% { opacity: 0.5; }
+}
