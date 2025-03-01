@@ -1,42 +1,37 @@
 body {
+    background-color: #2d2d2d; /* Dark Grey */
+    color: white;
     font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f9fa;
-    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 .container {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    display: inline-block;
+    background: #3a3a3a; /* Slightly lighter grey */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 350px;
 }
 
 button {
-    background-color: green;
+    background: #ff4d4d;
     color: white;
     border: none;
     padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
+    font-size: 16px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
 }
 
-button:disabled {
-    background-color: grey;
-    cursor: not-allowed;
+button:hover {
+    background: #ff3333;
 }
 
-.loading {
-    font-size: 20px;
-    color: #ffdd57;
-    font-weight: bold;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0.5; }
-}
 
 
